@@ -1,5 +1,8 @@
 import './index.css';
-import { MyClass } from './example-unit';
+import { ModelWatch } from './models';
+import { MainController } from './controllers';
 
-const a = new MyClass(2);
-console.log('number is', a.get());
+
+const controller = new MainController("bodyClock", "dateViewer", "btnMode", "btnIncrease", "btnLight");
+const watch = new ModelWatch();
+
