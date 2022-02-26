@@ -3,16 +3,21 @@
 
 <head>
     <meta charset="utf-8">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
     <!-- support for mobile touch devices -->
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
 </head>
+
 <body>
-    <div id="bodyClock">bodyClock </div>
-    <div id="dateViewer">dateViewer </div>
-    <div id="btnMode">btnMode </div>
-    <div id="btnIncrease">btnIncrease </div>
-    <div id="btnLight">btnLight </div>
+    <div id="bodyClock" class="clock"> </div>
+    <div id="dateContainer" class="dateContainer"> </div>
+    <div id="dateViewer" class="dateViewer clignote"> </div>
+    <div id="btnMode" class="btnMode"> </div>
+    <div id="btnIncrease" class="btnIncrease"> </div>
+    <div id="btnLight" class="btnLight"> </div>
 
 </body>
+
 </html>

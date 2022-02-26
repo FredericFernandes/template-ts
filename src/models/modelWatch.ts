@@ -1,4 +1,4 @@
-enum EnumWatchMode {
+export enum EnumWatchMode {
   STANDARD = 0,
   INCREASEHOUR = 1,
   INCREASEMINUTE = 2
@@ -42,6 +42,10 @@ export class ModelWatch implements IPublisher {
     });
   }
 
+  public getWatchMode(): EnumWatchMode {
+    return this.watchMode;
+  }
+
   public getLocalDate(): Date {
     return this.localDate;
   }
@@ -71,6 +75,7 @@ export class ModelWatch implements IPublisher {
     } else if (this.watchMode === EnumWatchMode.STANDARD) {
       this.initWatcherTime();
     }
+    this.notifySubscibers();
   }
 
   public IncreaseDate() {
@@ -87,8 +92,8 @@ export class ModelWatch implements IPublisher {
   }
 
   private addOneHour() {
+    console.log("addOneHour");
     this.localDate.setTime(this.localDate.getTime() + (1 * 60 * 60 * 1000));
-    console.log("Time: ", this.localDate.toString());
     this.notifySubscibers();
   }
 
@@ -98,8 +103,8 @@ export class ModelWatch implements IPublisher {
   }
 
   private addOneMinute() {
+    console.log("addOneMinute");
     this.localDate.setTime(this.localDate.getTime() + (60 * 1000));
-    console.log("Time: ", this.localDate.toString());
     this.notifySubscibers();
   }
 

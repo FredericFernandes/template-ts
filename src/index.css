@@ -1,3 +1,78 @@
 h1 {
     color: red;
 }
+.clock {
+    width: 150px;
+    height: 150px;
+    background-color: #1e64e3;
+    border-radius: 50%;
+    border: 2px solid black;
+    position: absolute;
+}
+
+.dateViewer {
+    position: relative;
+    top: -14px;
+    left: 33px;
+    width: 85px;
+    height: 60px;
+    text-align: center;
+    line-height: 61px;
+}
+
+.dateContainer {
+    position: relative;
+    top: 47px;
+    left: 33px;
+    width: 85px;
+    height: 60px;
+    background-color: #fafafa;
+    border-radius: 10%;
+}
+
+.btnMode {
+    position: relative;
+    top: -100px;
+    left: 131px;
+    width: 19px;
+    background-color: aqua;
+    transform: rotate(52deg);
+    height: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.btnIncrease {
+    position: relative;
+    top: -6px;
+    left: 128px;
+    width: 19px;
+    background-color: aqua;
+    transform: rotate(131deg);
+    height: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.btnLight {
+    position: relative;
+    top: -10px;
+    left: 14px;
+    width: 19px;
+    background-color: aqua;
+    transform: rotate(40deg);
+    height: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+
+}
+.light {
+    background-color: #e4fb67;
+}
+
+.clignote {
+    animation: clignote 1s cubic-bezier(0.18, 0.89, 0.32, 1.28) infinite;
+  }
+  @keyframes clignote {  
+    50% { opacity: 0; }
+  }
